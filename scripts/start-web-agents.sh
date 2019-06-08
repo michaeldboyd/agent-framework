@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo 'Starting NGROK'
-ngrok start -config web-agents-ngrok-config.yaml --all > /dev/null &
+/Users/michael/code/w/ngrok start -config web-agents-ngrok-config.yaml --all > /dev/null &
 sleep 2s
 ngrok_hosts=$(curl --silent --show-error http://localhost:4045/api/tunnels | sed -nE 's/.*public_url":"http:..([^"]*).*public_url":"http:..([^"]*).*/\1|\2/p')
 IFS="|" read -r host2 host1 <<< "$ngrok_hosts"
