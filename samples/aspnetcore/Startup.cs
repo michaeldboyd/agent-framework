@@ -32,6 +32,7 @@ namespace WebAgent
 
             services.AddSingleton<BasicMessageHandler>();
             services.AddSingleton<TrustPingMessageHandler>();
+            // add credentials handler here
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
